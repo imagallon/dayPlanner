@@ -3,7 +3,6 @@
 - What was your motivation?
 - This project was to get practice working with jquery and local storage
 -
-- Why did you build this project? 
 - 
 - What problem does it solve?
 - This app allows for users to better plan their day according to hour.
