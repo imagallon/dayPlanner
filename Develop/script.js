@@ -17,3 +17,33 @@ $saveButtons.on("click", function () {
 function saveValueToStorage(key, value) {
   localStorage.setItem(key, value);
 }
+
+/*
+create a function that gets the current number of hours
+loop over each time-block
+going check if it is current hour
+
+})
+*/
+
+
+
+function hourUpdater() {
+
+  var currentHours = moment().hours()
+  
+  $('time-block').each(function() {
+    let currentBlockHour = $(this).attr("id").split("-")[1]
+  
+    if (currentBlockHour < currentHours) {
+      $(this).addClass('past')
+    } else if (currentBlockHour === currentHours) {
+      $(this).addClass('present')
+      $(this).removeClass('past')
+    } else {
+      $(this).addClass('future')
+      $(this).removeClass('present')
+    }
+  )
+}
+hourUpdater();
